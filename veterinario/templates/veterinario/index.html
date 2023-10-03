@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+    <h2>Veterinarios</h2>
+{% endblock title %}
+{% block content %}
+    <ul>
+        {% for veterinario in veterinario %}
+            <li>{{veterinario.Nombre}}({{veterinario.Apellido}}) </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'veterinario:crear' %}">Agregar veterinario</a></p>
+    <p><a href="{% url 'home:index' %}">Home</a></p>
+  {% endblock content %}
+  

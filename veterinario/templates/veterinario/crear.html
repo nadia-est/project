@@ -1,0 +1,11 @@
+{% block content %}
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <p><a href="{% url 'home:index' %}">Ir al menú principal</a></p>
+
+{% endblock content %}

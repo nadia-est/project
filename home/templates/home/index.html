@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+    <h2>Consentidos</h2>    
+{% endblock title %}
+
+{% block content %}
+  <p><a href="{% url 'adoptante:index' %}">Dueño</a></p>
+  <p><a href="{% url 'mascota:index' %}">Mascotas</a></p>
+  <p><a href="{% url 'veterinario:index' %}">veterinario</a></p>
+{% endblock content %}
