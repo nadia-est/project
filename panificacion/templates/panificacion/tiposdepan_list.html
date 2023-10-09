@@ -1,0 +1,22 @@
+{%extends 'panificacion/base.html'%}
+
+{%block panificacion%}
+
+<div class="py-4">
+        <form action="" method="get">
+            <input type="text" name="buscar" placeholder="Buscar producto">
+        </form>
+    </div>
+
+{%for panificacion in objec_list%}
+<ul>
+   <li>{{producto.nombre}}</li>
+   <a href="{% url 'tiposdepan:tiposdepan_detail' panificacion.id %}">Ver detalle</a>
+   <a href="{%url 'tiposdepan:tiposdepan_update' panificacion.id %}">Actualizar</a>
+   <a href="{%url 'tiposdepan:tiposdepan_delete'panificacion.id %}">Eliminar</a>
+</ul>
+{%endfor%}
+<a href="{%url 'tiposdepan:tiposdepan_create' %}" class="btn btn-dark">Crear panificacion</a>
+<a href="{%url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
+
+{%block panificacion%}

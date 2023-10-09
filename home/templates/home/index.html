@@ -1,11 +1,22 @@
 {% extends 'home/base.html' %}
-
-{% block title %}
-    <h2>Consentidos</h2>    
-{% endblock title %}
+{% load static%}
 
 {% block content %}
-  <p><a href="{% url 'adoptante:index' %}">Dueño</a></p>
-  <p><a href="{% url 'mascota:index' %}">Mascotas</a></p>
-  <p><a href="{% url 'veterinario:index' %}">veterinario</a></p>
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+              <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src ="{%static "home/imagenes/panaderia.jpg" %}" alt="..." /></div>
+              <div class="col-lg-5">
+                <h1 class="font-weight-light">¡Bienvenidos a Verona!</h1>
+                 <p>Esperamos que puedas disfrutar de la experiencia de probar nuestros productos...¡sientete libre de elegir lo que desees! </p>
+
+                </div>
+                </div>
+            
+                <!-- Call to Action-->
+                <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+                </div>
+           
+
+<a href="{% url 'home:about' %}"class ="btn btn-primary">¿quienes somos?</a>
+
 {% endblock content %}

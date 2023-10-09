@@ -1,21 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=>, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>veterinaria</h1>
-  {%block title%}
-  <h2>Consentidos</h2>
-  {%endblock title%}
-
-  {%block content%}
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam officiis voluptatibus totam consectetur enim voluptatum ipsum reiciendis modi veniam. Sed necessitatibus doloremque numquam in amet doloribus officia, vitae pariatur laudantium.</p>
-  {%endblock content%}
-
-
-</body>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Panaderia-Verona</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'home/css/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'home/navbar.html' %}
+        <div class="container px-4 px-lg-5">
+            <div class="mb-lg-m-5">
+                {% block content %}
+                    {% block content_title %}
+                    
+                    {% endblock content_title %}
+                {% endblock content %}
+            </div>
+        </div>
+        {% include 'home/footer.html' %}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'home/js/scripts.js' %}"></script>
+    </body>
 </html>
