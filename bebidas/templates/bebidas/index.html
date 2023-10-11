@@ -1,11 +1,15 @@
 {% extends "bebidas/base.html" %}
-
-{% block content_tittle %}
-      seccion bebidas
-{% endblock content_tittle %}
+{% block content %}
+{% block content_title %}
+     seccion bebidas               
+{% endblock content_title %}
+{% endblock content %}
 
 
 {%block bebidas %}
- 
+
+<h3>
+  <a href="{% url 'bebidas:bebidas_list' %}">Bebidas</a>
+</h3>
 
 {%endblock bebidas %}

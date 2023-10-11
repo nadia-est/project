@@ -1,0 +1,21 @@
+{%extends 'bebidas/base.html'%}
+
+{% block content_tittle %}
+      crear categoria
+  {% endblock content_tittle %}
+
+{%block bebidas%}
+
+<form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="row mt-4">
+            <button type="submit" class="btn btn-success ">Guardar</button>
+        </div>
+    </form>
+
+{%endfor%}
+
+<a href="{%url 'bebidas:index' %}" class="btn btn-dark">Volver a inicio</a>
+
+{%block bebidas%}

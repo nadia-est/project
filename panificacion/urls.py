@@ -16,6 +16,7 @@ urlpatterns += [
   path("panificacion/detail/<int:pk>",views.panificaciondetail.as_view(), name = "panificacion_detail"),
   path("panificacion/update/<int:pk>",views.panificacionupdate.as_view(), name = "panificacion_update"),
   path("panificacion/delete/<int:pk>",views.panificaciondelete.as_view(), name = "panificacion_delete"),
+  
   path("tiposdepan/list/",views.tiposdepanlist.as_view(), name = "tiposdepan_list"),
   path("tiposdepan/create/",views.tiposdepancreate.as_view(), name = "tiposdepan_create"),
   path("tiposdepan/detail/<int:pk>",views.tiposdepandetail.as_view(), name = "tiposdepan_detail"),

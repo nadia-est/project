@@ -1,0 +1,22 @@
+{%extends 'bebidas/base.html'%}
+
+{%block bebidas%}
+
+<div class="py-4">
+        <form action="" method="get">
+            <input type="text" name="buscar" placeholder="Buscar producto">
+        </form>
+    </div>
+
+{%for bebidas in objec_list%}
+<ul>
+   <li>{{producto.nombre}}</li>
+   <a href="{% url 'bebidas:bebidas_detail' bebidas.id %}">Ver detalle</a>
+   <a href="{%url 'bebidas:bebidas_update' bebidas.id %}">Actualizar</a>
+   <a href="{%url 'bebidas:bebidas_delete'bebidas.id %}">Eliminar</a>
+</ul>
+{%endfor%}
+<a href="{%url 'bebidas:bebidas_create' %}" class="btn btn-dark">Crear panificacion</a>
+<a href="{%url 'bebidas:index' %}" class="btn btn-dark">Volver a inicio</a>
+
+{%block bebidas%}
