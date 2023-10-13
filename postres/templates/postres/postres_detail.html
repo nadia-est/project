@@ -1,0 +1,12 @@
+{%extends 'postres/base.html'%}
+
+{%block postres%}
+
+<ul>
+    <li><strong>Nombre:</strong> {{ object.nombre }}</li>
+</ul>
+{%endfor%}
+
+<a href="{%url 'postres:index' %}" class="btn btn-dark">Volver a inicio</a>
+
+{%endblock postres%}

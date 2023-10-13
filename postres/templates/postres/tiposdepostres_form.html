@@ -1,10 +1,10 @@
-{%extends 'panificacion/base.html'%}
+{%extends 'postres/base.html'%}
 
 {% block content_tittle %}
       crear categoria
   {% endblock content_tittle %}
 
-{%block panificacion%}
+{%block postres%}
 
 <form action="" method="post">
         {% csrf_token %}
@@ -16,6 +16,6 @@
 
 {%endfor%}
 
-<a href="{%url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
+<a href="{%url 'postres:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock panificacion%}
+{%endblock postres%}

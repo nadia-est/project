@@ -1,4 +1,5 @@
 {% extends "panificacion/base.html" %}
+{%load static%}
 {% block content_title %}
   seccion panificacion              
 {% endblock content_title %}
@@ -8,7 +9,12 @@
 <h3>
   <a href="{% url 'panificacion:panificacion_list' %}">Panificacion</a>
    <a href="{% url 'tiposdepan:tiposdepan_list' %}">Tipos de panes</a>
-   
 </h3>
+
+<div class="col-md-6">
+            <img class="img-fluid float-right"
+                 src=" {% static 'home/imagenes/panes.jpg' %}"
+                 style="max-width: 600px" />
+        </div>
 
 {% endblock panificacion %}

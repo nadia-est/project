@@ -16,4 +16,10 @@ urlpatterns += [
   path("bebidas/detail/<int:pk>",views.bebidasdetail.as_view(), name = "bebidas_detail"),
   path("bebidas/update/<int:pk>",views.bebidasupdate.as_view(), name = "bebidas_update"),
   path("bebidas/delete/<int:pk>",views.bebidasdelete.as_view(), name = "bebidas_delete"),
+  
+  path("tiposdebebidas/list/",views.tiposdebebidaslist.as_view(), name = "tiposdebebidas_list"),
+  path("tiposdebebidas/create/",views.tiposdebebidascreate.as_view(), name = "tiposdebebidas_create"),
+  path("tiposdebebidas/detail/<int:pk>",views.tiposdebebidasdetail.as_view(), name = "tiposdebebidas_detail"),
+  path("tiposdebebidas/update/<int:pk>",views.tiposdebebidasupdate.as_view(), name = "tiposdebebidas_update"),
+  path("tiposdebebidas/delete/<int:pk>",views.tiposdebebidasdelete.as_view(), name = "tiposdebebidas_delete"),
   ]

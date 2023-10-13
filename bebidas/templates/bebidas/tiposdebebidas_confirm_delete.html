@@ -1,10 +1,10 @@
-{%extends 'postres/base.html'%}
+{%extends 'bebidas/base.html'%}
 
 {% block title %}
-Eliminar Producto
+    Eliminar Producto
 {% endblock title %}
 
-{%block postres%}
+{%block bebidas%}
 
   <p class="fs-5 fst-italic">¿Está seguro de eliminar el producto: {{ object.nombre }}?</p>
 
@@ -15,6 +15,6 @@ Eliminar Producto
         </div>
     </form>
 
-<a href="{%url 'postres:index' %}" class="btn btn-dark">Volver a inicio</a>
+<a href="{%url 'bebidas:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock postres%}
+{%block bebidas%}

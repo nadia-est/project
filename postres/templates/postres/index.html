@@ -1,0 +1,14 @@
+{% extends "postres/base.html" %}
+{% block content_title %}
+  seccion postres            
+{% endblock content_title %}
+
+{% block postres %}
+
+<h3>
+  <a href="{% url 'postres:postres_list' %}">postres</a>
+   <a href="{% url 'tiposdepostres:tiposdepostres_list' %}">Tipos de postres</a>
+   
+</h3>
+
+{% endblock postres %}

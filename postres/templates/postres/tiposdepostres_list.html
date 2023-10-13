@@ -11,12 +11,12 @@
 {%for postres in objec_list%}
 <ul>
    <li>{{producto.nombre}}</li>
-   <a href="{% url 'postres:postres_detail' postres.id %}">Ver detalle</a>
-   <a href="{%url 'postres:postres_update' postres.id %}">Actualizar</a>
-   <a href="{%url 'postres:postres_delete'postres.id %}">Eliminar</a>
+   <a href="{% url 'tiposdepostres:tiposdepostres_detail' tiposdepostres.id %}">Ver detalle</a>
+   <a href="{%url 'tiposdepostres:tiposdepostres_update' tiposdepostres.id %}">Actualizar</a>
+   <a href="{%url 'tiposdepostres:tiposdepostres_delete' tiposdepostres.id %}">Eliminar</a>
 </ul>
 {%endfor%}
-<a href="{%url 'postres:postres_create' %}" class="btn btn-dark">Crear bebidas</a>
+<a href="{%url 'tiposdepostres:postres_create' %}" class="btn btn-dark">Crear tipos de postres</a>
 <a href="{%url 'postres:index' %}" class="btn btn-dark">Volver a inicio</a>
 
 {%endblock postres%}
