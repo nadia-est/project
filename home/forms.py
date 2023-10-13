@@ -13,7 +13,6 @@ class CustomUserCreationForm(UserCreationForm):
             "password1": forms.PasswordInput(attrs={"class": "form-control"}),
             "password2": forms.PasswordInput(attrs={"class": "form-control"}),
         }
-
 class CustomAuthenticationForm(AuthenticationForm):
     class Meta:
         model = User

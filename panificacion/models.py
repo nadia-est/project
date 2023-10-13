@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class panificacion(models.Model):
   nombre = models.CharField(max_length=50)
   descripcion = models.CharField(max_length=250, null=True, blank = True, verbose_name= "descripcion")

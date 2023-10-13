@@ -21,8 +21,7 @@ class tiposdepostres(admin.ModelAdmin):
         "precio",
         "descripcion",
         "fecha_actualizacion",
-    )
-    
+    ) 
     list_display_links = ("nombre",)
     search_fields = ("nombre",)
     ordering = ("categoria","nombre",)

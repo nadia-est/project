@@ -37,8 +37,6 @@ class panificaciondelete(DeleteView, LoginRequiredMixin):
     model = models.panificacion
     success_url = reverse_lazy("panificacion:panificacion_list")
     
-    
-
 class tiposdepanlist(ListView):
   model= models.panificacion
   

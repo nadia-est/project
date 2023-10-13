@@ -44,7 +44,6 @@ class tiposdepostreslist(ListView):
             object_list = models.tiposdepostres.objects.all()
         return object_list
 
-
 class tiposdepostresdetail(DetailView):
     model = models.tiposdepostres
 

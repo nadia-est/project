@@ -23,6 +23,5 @@ class tiposdepostres(models.Model):
   class Meta:
         verbose_name = "tipo de postre"
         verbose_name_plural = "tipos de postres"
-
   def __str__(self)-> str:
         return f"{self.nombre} ({self.cantidad})- ${self.precio}"

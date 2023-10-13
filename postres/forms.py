@@ -13,7 +13,6 @@ class postresform(forms.ModelForm):
             "descripcion": forms.TextInput(attrs={"class": "form-control"}),
         }
         
-        
 class tiposdepostresform(forms.ModelForm):
     class Meta:
         model = models.postres

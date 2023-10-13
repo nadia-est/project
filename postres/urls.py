@@ -16,7 +16,6 @@ urlpatterns += [
   path("postres/detail/<int:pk>",views.postresdetail.as_view(), name = "postres_detail"),
   path("postres/update/<int:pk>",views.postresupdate.as_view(), name = "postres_update"),
   path("postres/delete/<int:pk>",views.postresdelete.as_view(), name = "postres_delete"),
-  
   path("tiposdepostres/list/",views.tiposdepostreslist.as_view(), name = "tiposdepostres_list"),
   path("tiposdepostres/create/",views.tiposdepostrescreate.as_view(), name = "tiposdepostres_create"),
   path("tiposdepostres/detail/<int:pk>",views.tiposdepostresdetail.as_view(), name = "tiposdepostres_detail"),
