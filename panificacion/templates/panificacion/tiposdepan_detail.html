@@ -1,19 +1,15 @@
-{%extends 'panificacion/base.html'%}
+{% extends 'panificacion/base.html' %}
 
-
-{%block panificacion%}
+{% block content %}
 <ul>
     <li><strong>Nombre:</strong> {{ object.nombre }}</li>
     <li><strong>Categoría:</strong> {{ object.categoria }}</li>  
-    <li><strong>Cantidad:</strong> {{ object.cantidad }}
-    <li><strong>Precio:</strong> {{ object.precio }}
-    <li><strong>Descripción:</strong> {{ object.descripcion }}
-    <li><strong>Fecha de actualización:</strong> {{ object.fecha_actualizacion }}
-    </li>
-  
+    <li><strong>Cantidad:</strong> {{ object.cantidad }}</li>
+    <li><strong>Precio:</strong> {{ object.precio }}</li>
+    <li><strong>Descripción:</strong> {{ object.descripcion }}</li>
+    <li><strong>Fecha de actualización:</strong> {{ object.fecha_actualizacion }}</li>
 </ul>
-{%endfor%}
 
-<a href="{%url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
+<a href="{% url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock panificacion%}
+{% endblock content %}

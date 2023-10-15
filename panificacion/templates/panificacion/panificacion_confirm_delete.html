@@ -1,11 +1,10 @@
 {%extends 'panificacion/base.html'%}
 
-
 {% block title %}
     Eliminar Producto
 {% endblock title %}
 
-{%block panificacion%}
+{% block content %}
 
   <p class="fs-5 fst-italic">¿Está seguro de eliminar el producto: {{ object.nombre }}?</p>
 
@@ -18,4 +17,4 @@
 
 <a href="{%url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock panificacion%}
+{% endblock content %}

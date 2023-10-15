@@ -26,4 +26,4 @@ class tiposdepan(models.Model):
         verbose_name_plural = "tipos de panes"
 
   def __str__(self)-> str:
-        return f"{self.nombre} ({self.tamaño})- ${self.precio}"
+        return f"{self.nombre} ({self.cantidad})- ${self.precio}"

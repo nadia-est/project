@@ -32,7 +32,6 @@ class panificacionupdate(UpdateView, LoginRequiredMixin):
     form_class = forms.panificacionform
     success_url = reverse_lazy("panificacion:panificacion_list")
 
-
 class panificaciondelete(DeleteView, LoginRequiredMixin):
     model = models.panificacion
     success_url = reverse_lazy("panificacion:panificacion_list")
@@ -48,16 +47,13 @@ class tiposdepanlist(ListView):
             object_list = models.tiposdepan.objects.all()
         return object_list
 
-
 class tiposdepandetail(DetailView):
     model = models.panificacion
-
 
 class tiposdepancreate(CreateView, LoginRequiredMixin):
     model = models.tiposdepan
     form_class = forms.tiposdepanform
     success_url = reverse_lazy("tiposdepan:tiposdepan_list")
-
 
 class tiposdepanupdate(UpdateView, LoginRequiredMixin):
     model = models.tiposdepan

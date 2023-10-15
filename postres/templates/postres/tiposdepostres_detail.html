@@ -1,7 +1,7 @@
 {%extends 'postres/base.html'%}
 
 
-{%block postres%}
+{% block content %}
 
 <ul>
     <li><strong>Nombre:</strong> {{ object.nombre }}</li>
@@ -17,4 +17,4 @@
 
 <a href="{%url 'postres:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock postres%}
+{%endblock content %}

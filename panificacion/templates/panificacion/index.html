@@ -1,22 +1,19 @@
 {% extends "panificacion/base.html" %}
-
 {%load static%}
+{% block content %}
 {% block content_title %}
-  seccion panificacion  
-              
+  seccion panificacion          
 {% endblock content_title %}
-
-{% block panificacion %}
 
 <h3>
   <a href="{% url 'panificacion:panificacion_list' %}">Panificacion</a>
-   <a href="{% url 'tiposdepan:tiposdepan_list' %}">Tipos de panes</a>
+
+  <a href="{% url 'panificacion:tiposdepan_list' %}">Elegir panificacion</a>
 </h3>
 
 <div class="col-md-6">
             <img class="img-fluid float-right"
                  src=" {% static 'home/imagenes/panes.jpg' %}"
-                 style="max-width: 600px" />
+                 style="max-width: 400px" />
         </div>
-
-{% endblock panificacion %}
+{%endblock content %}

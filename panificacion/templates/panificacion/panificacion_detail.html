@@ -1,13 +1,14 @@
 {%extends 'panificacion/base.html'%}
 
 
-{%block panificacion%}
+{% block content %}
 
 <ul>
     <li><strong>Nombre:</strong> {{ object.nombre }}</li>
+    <li><strong>Descripcion:</strong> {{ object.descripcion }}</li>
 </ul>
-{%endfor%}
+
 
 <a href="{%url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock panificacion%}
+{%endblock content %}

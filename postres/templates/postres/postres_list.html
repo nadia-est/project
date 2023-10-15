@@ -1,23 +1,22 @@
-{%extends 'postres/base.html'%}
+{% extends 'postres/base.html' %}
 
-
-{%block postres%}
+{% block content %}
 
 <div class="py-4">
-        <form action="" method="get">
-            <input type="text" name="buscar" placeholder="Buscar producto">
-        </form>
-    </div>
+    <form action="" method="get">
+        <input type="text" name="buscar" placeholder="Buscar producto">
+    </form>
+</div>
 
-{%for postres in objec_list%}
+{% for postres in object_list %}
 <ul>
-   <li>{{producto.nombre}}</li>
+   <li>{{ postres.nombre }}</li>
    <a href="{% url 'postres:postres_detail' postres.id %}">Ver detalle</a>
-   <a href="{%url 'postres:postres_update' postres.id %}">Actualizar</a>
-   <a href="{%url 'postres:postres_delete'postres.id %}">Eliminar</a>
+   <a href="{% url 'postres:postres_update' postres.id %}">Actualizar</a>
+   <a href="{% url 'postres:postres_delete' postres.id %}">Eliminar</a>
 </ul>
-{%endfor%}
-<a href="{%url 'postres:postres_create' %}" class="btn btn-dark">Crear bebidas</a>
-<a href="{%url 'postres:index' %}" class="btn btn-dark">Volver a inicio</a>
+{% endfor %}
+<a href="{% url 'postres:postres_create' %}" class="btn btn-dark">Crear bebidas</a>
+<a href="{% url 'postres:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock postres%}
+{% endblock content %}

@@ -4,7 +4,7 @@
       crear categoria
   {% endblock content_tittle %}
 
-{%block bebidas%}
+{% block content %}
 
 <form action="" method="post">
         {% csrf_token %}
@@ -14,8 +14,8 @@
         </div>
     </form>
 
-{%endfor%}
+
 
 <a href="{%url 'bebidas:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%block bebidas%}
+{% endblock content %}

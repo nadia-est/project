@@ -1,15 +1,18 @@
 {% extends "postres/base.html" %}
-
+{%load static%}
+{% block content %}
 {% block content_title %}
-  seccion postres            
+  Seccion Postres            
 {% endblock content_title %}
-
-{% block postres %}
-
 <h3>
   <a href="{% url 'postres:postres_list' %}">postres</a>
-   <a href="{% url 'tiposdepostres:tiposdepostres_list' %}">Tipos de postres</a>
-   
+   <a href="{% url 'postres:tiposdepostres_list' %}">Tipos de postres</a>
 </h3>
 
-{% endblock postres %}
+<div class="col-md-6">
+            <img class="img-fluid float-right"
+                 src=" {% static 'home/imagenes/postres.jpg' %}"
+                 style="max-width: 400px" />
+        </div>
+
+{%endblock content %}

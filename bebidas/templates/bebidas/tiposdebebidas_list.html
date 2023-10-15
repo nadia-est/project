@@ -1,22 +1,24 @@
-{%extends 'bebidas/base.html'%}
+{% extends 'bebidas/base.html' %}
 
-{%block panificacion%}
+{% block content %}
 
 <div class="py-4">
-        <form action="" method="get">
-            <input type="text" name="buscar" placeholder="Buscar producto">
-        </form>
-    </div>
+    <form action="" method="get">
+        <input type="text" name="buscar" placeholder="Buscar producto">
+        <button type="submit">Buscar</button>
+    </form>
+</div>
 
-{%for tiposdepan in objec_list%}
 <ul>
-   <li>{{producto.nombre}}</li>
-   <a href="{% url 'tiposdebebidas:tiposdebebidas_detail'bebidas.id %}">Ver detalle</a>
-   <a href="{%url 'tiposdebebidas:tiposdebebidas_update' bebidas.id %}">Actualizar</a>
-   <a href="{%url 'tiposdebebidas:tiposdebebidas_delete' bebidas.id %}">Eliminar</a>
+    {% for tiposdepan in object_list %}
+        <li>{{ tiposdepan.nombre }}</li>
+        <a href="{% url 'bebidas:tiposdebebidas_detail' bebidas.id %}">Ver detalle</a>
+        <a href="{% url 'bebidas:tiposdebebidas_update' bebidas.id %}">Actualizar</a>
+        <a href="{% url 'bebidas:tiposdebebidas_delete' bebidas.id %}">Eliminar</a>
+    {% endfor %}
 </ul>
-{%endfor%}
-<a href="{%url 'tiposdebebidas:tiposdebebidas_create' %}" class="btn btn-dark">Crear panificacion</a>
-<a href="{%url 'bebidas:index' %}" class="btn btn-dark">Volver a inicio</a>
 
-{%endblock panificacion%}
+<a href="{% url 'bebidas:tiposdebebidas_create' %}" class="btn btn-dark">Crear detalles</a>
+<a href="{% url 'bebidas:index' %}" class="btn btn-dark">Volver a inicio</a>
+
+{% endblock content %}

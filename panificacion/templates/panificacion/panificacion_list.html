@@ -1,23 +1,23 @@
-{%extends 'panificacion/base.html'%}
+{% extends 'panificacion/base.html' %}
 
-
-{%block panificacion%}
+{% block content %}
 
 <div class="py-4">
-        <form action="" method="get">
-            <input type="text" name="buscar" placeholder="Buscar producto">
-        </form>
-    </div>
+    <form action="" method="get">
+        <input type="text" name="buscar" placeholder="Buscar producto">
+    </form>
+</div>
 
-{%for panificacion in objec_list%}
+{% for panificacion in object_list %}
 <ul>
-   <li>{{producto.nombre}}</li>
+   <li>{{ panificacion.nombre }}</li>
    <a href="{% url 'panificacion:panificacion_detail' panificacion.id %}">Ver detalle</a>
-   <a href="{%url 'panificacion:panificacion_update' panificacion.id %}">Actualizar</a>
-   <a href="{%url 'panificacion:panificacion_delete'panificacion.id %}">Eliminar</a>
+   <a href="{% url 'panificacion:panificacion_update' panificacion.id %}">Actualizar</a>
+   <a href="{% url 'panificacion:panificacion_delete' panificacion.id %}">Eliminar</a>
 </ul>
-{%endfor%}
-<a href="{%url 'panificacion:panificacion_create' %}" class="btn btn-dark">Crear panificacion</a>
-<a href="{%url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
+{% endfor %}
 
-{%endblock panificacion%}
+<a href="{% url 'panificacion:panificacion_create' %}" class="btn btn-dark">Crear panificación</a>
+<a href="{% url 'panificacion:index' %}" class="btn btn-dark">Volver a inicio</a>
+
+{% endblock content %}
